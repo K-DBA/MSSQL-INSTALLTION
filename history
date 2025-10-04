@@ -1,3 +1,1040 @@
+login as: kedar
+kedar@192.168.0.162's password:
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │                 • MobaXterm Personal Edition v23.6 •                 │
+    │               (SSH client, X server and network tools)               │
+    │                                                                      │
+    │ ⮞ SSH session to kedar@192.168.0.162                                 │
+    │   • Direct SSH      :  ✓                                             │
+    │   • SSH compression :  ✓                                             │
+    │   • SSH-browser     :  ✓                                             │
+    │   • X11-forwarding  :  ✓  (remote display is forwarded through SSH)  │
+    │                                                                      │
+    │ ⮞ For more info, ctrl+click on help or visit our website.            │
+    └──────────────────────────────────────────────────────────────────────┘
+
+Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 6.8.0-85-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+
+/usr/bin/xauth:  file /home/kedar/.Xauthority does not exist
+kedar@MSS:~$
+kedar@MSS:~$ sudo su
+[sudo] password for kedar:
+root@MSS:/home/kedar#
+root@MSS:/home/kedar# cd
+root@MSS:~#
+root@MSS:~# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           824M  1.5M  822M   1% /run
+/dev/sda3        24G   11G   13G  47% /
+tmpfs           4.1G     0  4.1G   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+/dev/sda2       512M  6.1M  506M   2% /boot/efi
+tmpfs           824M  140K  824M   1% /run/user/1000
+root@MSS:~#
+root@MSS:~# curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /e                                                                                       tc/apt/trusted.gpg.d/microsoft.asc
+Command 'curl' not found, but can be installed with:
+snap install curl  # version 8.16.0, or
+apt  install curl  # version 7.81.0-1ubuntu1.21
+See 'snap info curl' for additional versions.
+root@MSS:~#
+root@MSS:~# sudo apt install curl
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  curl
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 194 kB of archives.
+After this operation, 455 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 curl amd64 7.                                                                                       81.0-1ubuntu1.21 [194 kB]
+Fetched 194 kB in 1s (140 kB/s)
+Selecting previously unselected package curl.
+(Reading database ... 183183 files and directories currently installed.)
+Preparing to unpack .../curl_7.81.0-1ubuntu1.21_amd64.deb ...
+Unpacking curl (7.81.0-1ubuntu1.21) ...
+Setting up curl (7.81.0-1ubuntu1.21) ...
+Processing triggers for man-db (2.10.2-1) ...
+root@MSS:~#
+root@MSS:~# # Public repo key
+root@MSS:~#
+root@MSS:~# curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /e                                                                                       tc/apt/trusted.gpg.d/microsoft.asc
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   975  100   975    0     0  15037      0 --:--:-- --:--:-- --:--:-- 15000
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: BSN Pgp v1.1.0.0
+
+mQENBFYxWIwBCADAKoZhZlJxGNGWzqV+1OG1xiQeoowKhssGAKvd+buXCGISZJwT
+LXZqIcIiLP7pqdcZWtE9bSc7yBY2MalDp9Liu0KekywQ6VVX1T72NPf5Ev6x6DLV
+7aVWsCzUAF+eb7DC9fPuFLEdxmOEYoPjzrQ7cCnSV4JQxAqhU4T6OjbvRazGl3ag
+OeizPXmRljMtUUttHQZnRhtlzkmwIrUivbfFPD+fEoHJ1+uIdfOzZX8/oKHKLe2j
+H632kvsNzJFlROVvGLYAk2WRcLu+RjjggixhwiB+Mu/A8Tf4V6b+YppS44q8EvVr
+M+QvY7LNSOffSO6Slsy9oisGTdfE39nC7pVRABEBAAG0N01pY3Jvc29mdCAoUmVs
+ZWFzZSBzaWduaW5nKSA8Z3Bnc2VjdXJpdHlAbWljcm9zb2Z0LmNvbT6JATQEEwEI
+AB4FAlYxWIwCGwMGCwkIBwMCAxUIAwMWAgECHgECF4AACgkQ6z6Urb4SKc+P9gf/
+diY2900wvWEgV7iMgrtGzx79W/PbwWiOkKoD9sdzhARXWiP8Q5teL/t5TUH6TZ3B
+ENboDjwr705jLLPwuEDtPI9jz4kvdT86JwwG6N8gnWM8Ldi56SdJEtXrzwtlB/Fe
+6tyfMT1E/PrJfgALUG9MWTIJkc0GhRJoyPpGZ6YWSLGXnk4c0HltYKDFR7q4wtI8
+4cBu4mjZHZbxIO6r8Cci+xxuJkpOTIpr4pdpQKpECM6x5SaT2gVnscbN0PE19KK9
+nPsBxyK4wW0AvAhed2qldBPTipgzPhqB2gu0jSryil95bKrSmlYJd1Y1XfNHno5D
+xfn5JwgySBIdWWvtOI05gw==
+=zPfd
+-----END PGP PUBLIC KEY BLOCK-----
+root@MSS:~#
+root@MSS:~# # register SQL server repo
+root@MSS:~#
+root@MSS:~# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           824M  1.5M  822M   1% /run
+/dev/sda3        24G   11G   13G  47% /
+tmpfs           4.1G     0  4.1G   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+/dev/sda2       512M  6.1M  506M   2% /boot/efi
+tmpfs           824M  140K  824M   1% /run/user/1000
+root@MSS:~#
+root@MSS:~# cd /
+root@MSS:/# ls
+bin  boot  cdrom  dev  etc  home  lib  lib32  lib64  libx32  lost+found  media  mnt  opt  proc  root  run  sbin  snap  srv  swapfile  sys  tmp  usr  var
+root@MSS:/#
+root@MSS:/# ls -ltr
+total 2097232
+drwxr-xr-x  14 root root       4096 Sep 11  2024 usr
+drwxr-xr-x   2 root root       4096 Sep 11  2024 srv
+drwxr-xr-x   2 root root       4096 Sep 11  2024 opt
+drwxr-xr-x   2 root root       4096 Sep 11  2024 mnt
+drwxr-xr-x   2 root root       4096 Sep 11  2024 media
+drwxr-xr-x  14 root root       4096 Sep 11  2024 var
+drwxr-xr-x  11 root root       4096 Sep 11  2024 snap
+drwx------   2 root root      16384 Oct  4 14:40 lost+found
+-rw-------   1 root root 2147483648 Oct  4 14:40 swapfile
+lrwxrwxrwx   1 root root          8 Oct  4 14:40 sbin -> usr/sbin
+lrwxrwxrwx   1 root root         10 Oct  4 14:40 libx32 -> usr/libx32
+lrwxrwxrwx   1 root root          9 Oct  4 14:40 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root          9 Oct  4 14:40 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root          7 Oct  4 14:40 lib -> usr/lib
+lrwxrwxrwx   1 root root          7 Oct  4 14:40 bin -> usr/bin
+drwxrwxr-x   2 root root       4096 Oct  4 14:43 cdrom
+drwxr-xr-x   3 root root       4096 Oct  4 14:44 home
+drwxr-xr-x   4 root root       4096 Oct  4 15:01 boot
+dr-xr-xr-x  13 root root          0 Oct  4 15:03 sys
+dr-xr-xr-x 260 root root          0 Oct  4 15:03 proc
+drwxr-xr-x  19 root root       4080 Oct  4 15:03 dev
+drwxr-xr-x 129 root root      12288 Oct  4 15:07 etc
+drwx------   4 root root       4096 Oct  4 15:07 root
+drwxr-xr-x  34 root root        940 Oct  4 15:08 run
+drwxrwxrwt  19 root root       4096 Oct  4 15:18 tmp
+root@MSS:/#
+root@MSS:/# mkdir -p MSSQL
+root@MSS:/# chmod -X MSSQL
+root@MSS:/# ls -ltr
+total 2097236
+drwxr-xr-x  14 root root       4096 Sep 11  2024 usr
+drwxr-xr-x   2 root root       4096 Sep 11  2024 srv
+drwxr-xr-x   2 root root       4096 Sep 11  2024 opt
+drwxr-xr-x   2 root root       4096 Sep 11  2024 mnt
+drwxr-xr-x   2 root root       4096 Sep 11  2024 media
+drwxr-xr-x  14 root root       4096 Sep 11  2024 var
+drwxr-xr-x  11 root root       4096 Sep 11  2024 snap
+drwx------   2 root root      16384 Oct  4 14:40 lost+found
+-rw-------   1 root root 2147483648 Oct  4 14:40 swapfile
+lrwxrwxrwx   1 root root          8 Oct  4 14:40 sbin -> usr/sbin
+lrwxrwxrwx   1 root root         10 Oct  4 14:40 libx32 -> usr/libx32
+lrwxrwxrwx   1 root root          9 Oct  4 14:40 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root          9 Oct  4 14:40 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root          7 Oct  4 14:40 lib -> usr/lib
+lrwxrwxrwx   1 root root          7 Oct  4 14:40 bin -> usr/bin
+drwxrwxr-x   2 root root       4096 Oct  4 14:43 cdrom
+drwxr-xr-x   3 root root       4096 Oct  4 14:44 home
+drwxr-xr-x   4 root root       4096 Oct  4 15:01 boot
+dr-xr-xr-x  13 root root          0 Oct  4 15:03 sys
+dr-xr-xr-x 260 root root          0 Oct  4 15:03 proc
+drwxr-xr-x  19 root root       4080 Oct  4 15:03 dev
+drwxr-xr-x 129 root root      12288 Oct  4 15:07 etc
+drwx------   4 root root       4096 Oct  4 15:07 root
+drwxr-xr-x  34 root root        940 Oct  4 15:08 run
+drwxrwxrwt  19 root root       4096 Oct  4 15:18 tmp
+drw-r--r--   2 root root       4096 Oct  4 15:21 MSSQL
+root@MSS:/# chmod -R 777\ MSSQL
+chmod: missing operand after ‘777 MSSQL’
+Try 'chmod --help' for more information.
+root@MSS:/# chmod -R 777 MSSQL
+root@MSS:/# ls -ltr
+total 2097236
+drwxr-xr-x  14 root root       4096 Sep 11  2024 usr
+drwxr-xr-x   2 root root       4096 Sep 11  2024 srv
+drwxr-xr-x   2 root root       4096 Sep 11  2024 opt
+drwxr-xr-x   2 root root       4096 Sep 11  2024 mnt
+drwxr-xr-x   2 root root       4096 Sep 11  2024 media
+drwxr-xr-x  14 root root       4096 Sep 11  2024 var
+drwxr-xr-x  11 root root       4096 Sep 11  2024 snap
+drwx------   2 root root      16384 Oct  4 14:40 lost+found
+-rw-------   1 root root 2147483648 Oct  4 14:40 swapfile
+lrwxrwxrwx   1 root root          8 Oct  4 14:40 sbin -> usr/sbin
+lrwxrwxrwx   1 root root         10 Oct  4 14:40 libx32 -> usr/libx32
+lrwxrwxrwx   1 root root          9 Oct  4 14:40 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root          9 Oct  4 14:40 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root          7 Oct  4 14:40 lib -> usr/lib
+lrwxrwxrwx   1 root root          7 Oct  4 14:40 bin -> usr/bin
+drwxrwxr-x   2 root root       4096 Oct  4 14:43 cdrom
+drwxr-xr-x   3 root root       4096 Oct  4 14:44 home
+drwxr-xr-x   4 root root       4096 Oct  4 15:01 boot
+dr-xr-xr-x  13 root root          0 Oct  4 15:03 sys
+dr-xr-xr-x 260 root root          0 Oct  4 15:03 proc
+drwxr-xr-x  19 root root       4080 Oct  4 15:03 dev
+drwxr-xr-x 129 root root      12288 Oct  4 15:07 etc
+drwx------   4 root root       4096 Oct  4 15:07 root
+drwxr-xr-x  34 root root        940 Oct  4 15:08 run
+drwxrwxrwt  19 root root       4096 Oct  4 15:18 tmp
+drwxrwxrwx   2 root root       4096 Oct  4 15:21 MSSQL
+root@MSS:/#
+root@MSS:/# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           824M  1.5M  822M   1% /run
+/dev/sda3        24G   11G   13G  47% /
+tmpfs           4.1G     0  4.1G   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+/dev/sda2       512M  6.1M  506M   2% /boot/efi
+tmpfs           824M  140K  824M   1% /run/user/1000
+root@MSS:/#
+root@MSS:/# cd MSSQL/
+root@MSS:/MSSQL# pwd
+/MSSQL
+root@MSS:/MSSQL# hostnamectl
+ Static hostname: MSS
+       Icon name: computer-vm
+         Chassis: vm
+      Machine ID: fc0508ff798246339610211f5dbc6770
+         Boot ID: 7c6e60ab245946adb2ee5231ffd5fd42
+  Virtualization: oracle
+Operating System: Ubuntu 22.04.5 LTS
+          Kernel: Linux 6.8.0-85-generic
+    Architecture: x86-64
+ Hardware Vendor: innotek GmbH
+  Hardware Model: VirtualBox
+root@MSS:/MSSQL# hostnamectl
+ Static hostname: MSS
+       Icon name: computer-vm
+         Chassis: vm
+      Machine ID: fc0508ff798246339610211f5dbc6770
+         Boot ID: 7c6e60ab245946adb2ee5231ffd5fd42
+  Virtualization: oracle
+Operating System: Ubuntu 22.04.5 LTS
+          Kernel: Linux 6.8.0-85-generic
+    Architecture: x86-64
+ Hardware Vendor: innotek GmbH
+  Hardware Model: VirtualBox
+root@MSS:/MSSQL#
+root@MSS:/MSSQL#
+root@MSS:/MSSQL# curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   975  100   975    0     0  10074      0 --:--:-- --:--:-- --:--:-- 10156
+Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)).
+OK
+root@MSS:/MSSQL# curl https://packages.microsoft.com/config/ubuntu/22.04/mssql-server-2022.list | sudo tee /etc/apt/sources.list.d/mssql-server.list
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   102  100   102    0     0   1100      0 --:--:-- --:--:-- --:--:--  1108
+deb [arch=amd64,arm64,armhf] https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022 jammy main
+root@MSS:/MSSQL#
+root@MSS:/MSSQL# sudo apt-get update
+Get:1 https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022 jammy InRelease [3,624 B]
+Get:2 https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022 jammy/main amd64 Packages [8,492 B]
+Hit:3 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:4 http://in.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:5 http://in.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:6 http://in.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Fetched 12.1 kB in 1s (8,857 B/s)
+Reading package lists... Done
+root@MSS:/MSSQL#
+root@MSS:/MSSQL# sudo apt -a list mssql-server
+Listing... Done
+mssql-server/jammy 16.0.4215.2-2 amd64
+mssql-server/jammy 16.0.4212.1-3 amd64
+mssql-server/jammy 16.0.4210.1-1 amd64
+mssql-server/jammy 16.0.4205.1-1 amd64
+mssql-server/jammy 16.0.4200.1-4 amd64
+mssql-server/jammy 16.0.4195.2-4 amd64
+mssql-server/jammy 16.0.4185.3-3 amd64
+mssql-server/jammy 16.0.4175.1-3 amd64
+mssql-server/jammy 16.0.4165.4-7 amd64
+mssql-server/jammy 16.0.4155.4-6 amd64
+mssql-server/jammy 16.0.4150.1-1 amd64
+mssql-server/jammy 16.0.4145.4-1 amd64
+mssql-server/jammy 16.0.4140.3-1 amd64
+mssql-server/jammy 16.0.4135.4-3 amd64
+mssql-server/jammy 16.0.4125.3-1 amd64
+mssql-server/jammy 16.0.4120.1-1 amd64
+mssql-server/jammy 16.0.4115.5-2 amd64
+mssql-server/jammy 16.0.4105.2-2 amd64
+mssql-server/jammy 16.0.4100.1-1 amd64
+mssql-server/jammy 16.0.4095.4-1 amd64
+
+root@MSS:/MSSQL#
+root@MSS:/MSSQL#
+root@MSS:/MSSQL# sudo apt-get install -y mssql-server
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  gawk libc++1 libc++1-14 libc++abi1-14 libsigsegv2 libsss-nss-idmap0 libunwind-14
+Suggested packages:
+  gawk-doc clang
+The following NEW packages will be installed:
+  gawk libc++1 libc++1-14 libc++abi1-14 libsigsegv2 libsss-nss-idmap0 libunwind-14 mssql-server
+0 upgraded, 8 newly installed, 0 to remove and 0 not upgraded.
+Need to get 287 MB/287 MB of archives.
+After this operation, 1,347 MB of additional disk space will be used.
+Get:1 https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022 jammy/main amd64 mssql-server amd64 16.0.4215.2-2 [286 MB]
+Get:2 http://in.archive.ubuntu.com/ubuntu jammy/main amd64 libsigsegv2 amd64 2.13-1ubuntu3 [14.6 kB]
+Get:3 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gawk amd64 1:5.1.0-1ubuntu0.1 [447 kB]
+Get:4 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libunwind-14 amd64 1:14.0.0-1ubuntu1.1 [20.3 kB]
+Get:5 http://in.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libc++abi1-14 amd64 1:14.0.0-1ubuntu1.1 [66.9 kB]
+Get:6 http://in.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libc++1-14 amd64 1:14.0.0-1ubuntu1.1 [289 kB]
+Get:7 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libc++1 amd64 1:14.0-55~exp2 [3,160 B]
+Fetched 287 MB in 22s (12.9 MB/s)
+Preconfiguring packages ...
+Selecting previously unselected package libsigsegv2:amd64.
+(Reading database ... 183190 files and directories currently installed.)
+Preparing to unpack .../libsigsegv2_2.13-1ubuntu3_amd64.deb ...
+Unpacking libsigsegv2:amd64 (2.13-1ubuntu3) ...
+Setting up libsigsegv2:amd64 (2.13-1ubuntu3) ...
+Selecting previously unselected package gawk.
+(Reading database ... 183197 files and directories currently installed.)
+Preparing to unpack .../0-gawk_1%3a5.1.0-1ubuntu0.1_amd64.deb ...
+Unpacking gawk (1:5.1.0-1ubuntu0.1) ...
+Selecting previously unselected package libunwind-14:amd64.
+Preparing to unpack .../1-libunwind-14_1%3a14.0.0-1ubuntu1.1_amd64.deb ...
+Unpacking libunwind-14:amd64 (1:14.0.0-1ubuntu1.1) ...
+Selecting previously unselected package libc++abi1-14:amd64.
+Preparing to unpack .../2-libc++abi1-14_1%3a14.0.0-1ubuntu1.1_amd64.deb ...
+Unpacking libc++abi1-14:amd64 (1:14.0.0-1ubuntu1.1) ...
+Selecting previously unselected package libc++1-14:amd64.
+Preparing to unpack .../3-libc++1-14_1%3a14.0.0-1ubuntu1.1_amd64.deb ...
+Unpacking libc++1-14:amd64 (1:14.0.0-1ubuntu1.1) ...
+Selecting previously unselected package libc++1:amd64.
+Preparing to unpack .../4-libc++1_1%3a14.0-55~exp2_amd64.deb ...
+Unpacking libc++1:amd64 (1:14.0-55~exp2) ...
+Selecting previously unselected package libsss-nss-idmap0.
+Preparing to unpack .../5-libsss-nss-idmap0_2.6.3-1ubuntu3.6_amd64.deb ...
+Unpacking libsss-nss-idmap0 (2.6.3-1ubuntu3.6) ...
+Selecting previously unselected package mssql-server.
+Preparing to unpack .../6-mssql-server_16.0.4215.2-2_amd64.deb ...
+Unpacking mssql-server (16.0.4215.2-2) ...
+Setting up gawk (1:5.1.0-1ubuntu0.1) ...
+Setting up libunwind-14:amd64 (1:14.0.0-1ubuntu1.1) ...
+Setting up libc++abi1-14:amd64 (1:14.0.0-1ubuntu1.1) ...
+Setting up libsss-nss-idmap0 (2.6.3-1ubuntu3.6) ...
+Setting up libc++1-14:amd64 (1:14.0.0-1ubuntu1.1) ...
+Setting up libc++1:amd64 (1:14.0-55~exp2) ...
+Setting up mssql-server (16.0.4215.2-2) ...
+Locale en_IN not supported. Using en_US.
+
++--------------------------------------------------------------+
+Please run 'sudo /opt/mssql/bin/mssql-conf setup'
+to complete the setup of Microsoft SQL Server
++--------------------------------------------------------------+
+
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.11) ...
+root@MSS:/MSSQL#
+root@MSS:/MSSQL# sudo /opt/mssql/bin/mssql-conf setup
+Locale en_IN not supported. Using en_US.
+Choose an edition of SQL Server:
+  1) Evaluation (free, no production use rights, 180-day limit)
+  2) Developer (free, no production use rights)
+  3) Express (free)
+  4) Web (PAID)
+  5) Standard (PAID)
+  6) Enterprise (PAID) - CPU core utilization restricted to 20 physical/40 hyperthreaded
+  7) Enterprise Core (PAID) - CPU core utilization up to Operating System Maximum
+  8) I bought a license through a retail sales channel and have a product key to enter.
+  9) Standard (Billed through Azure) - Use pay-as-you-go billing through Azure.
+ 10) Enterprise Core (Billed through Azure) - Use pay-as-you-go billing through Azure.
+
+Details about editions can be found at
+https://go.microsoft.com/fwlink/?LinkId=2109348
+
+Use of PAID editions of this software requires separate licensing through a
+Microsoft Volume Licensing program.
+By choosing a PAID edition, you are verifying that you have the appropriate
+number of licenses in place to install and run this software.
+By choosing an edition billed Pay-As-You-Go through Azure, you are verifying
+that the server and SQL Server will be connected to Azure by installing the
+management agent and Azure extension for SQL Server.
+
+Enter your edition(1-10): 3
+The license terms for this product can be found in
+/usr/share/doc/mssql-server or downloaded from: https://aka.ms/useterms
+
+The privacy statement can be viewed at:
+https://go.microsoft.com/fwlink/?LinkId=853010
+
+Do you accept the license terms? [Yes/No]:Yes
+
+
+Choose the language for SQL Server:
+(1) English
+(2) Deutsch
+(3) Español
+(4) Français
+(5) Italiano
+(6) 日本語
+(7) 한국어
+(8) Português
+(9) Руѝѝкий
+(10) 中文 – 简体
+(11) 中文 （繝体）
+Enter Option 1-11: 1
+Enter the SQL Server system administrator password:
+Confirm the SQL Server system administrator password:
+Configuring SQL Server...
+
+The licensing PID was successfully processed. The new edition is [Express Edition].
+ForceFlush is enabled for this instance.
+ForceFlush feature is enabled for log durability.
+Created symlink /etc/systemd/system/multi-user.target.wants/mssql-server.service → /lib/systemd/system/mssql-server.service.
+Setup has completed successfully. SQL Server is now starting.
+root@MSS:/MSSQL#
+root@MSS:/MSSQL# pwd
+/MSSQL
+root@MSS:/MSSQL# cd ..
+root@MSS:/# sudo chown mssql:mssql /MSSQL
+root@MSS:/# sudo systemctl status mssql-server
+● mssql-server.service - Microsoft SQL Server Database Engine
+     Loaded: loaded (/lib/systemd/system/mssql-server.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2025-10-04 15:31:26 IST; 54s ago
+       Docs: https://docs.microsoft.com/en-us/sql/linux
+   Main PID: 10237 (sqlservr)
+      Tasks: 168
+     Memory: 636.8M
+        CPU: 12.609s
+     CGroup: /system.slice/mssql-server.service
+             ├─10237 /opt/mssql/bin/sqlservr
+             └─10240 /opt/mssql/bin/sqlservr
+
+Oct 04 15:31:33 MSS sqlservr[10240]: [318B blob data]
+Oct 04 15:31:33 MSS sqlservr[10240]: [95B blob data]
+Oct 04 15:31:33 MSS sqlservr[10240]: [101B blob data]
+Oct 04 15:31:33 MSS sqlservr[10240]: [145B blob data]
+Oct 04 15:31:33 MSS sqlservr[10240]: [96B blob data]
+Oct 04 15:31:33 MSS sqlservr[10240]: [100B blob data]
+Oct 04 15:31:34 MSS sqlservr[10240]: [71B blob data]
+Oct 04 15:31:34 MSS sqlservr[10240]: [124B blob data]
+Oct 04 15:31:36 MSS sqlservr[10240]: [73B blob data]
+Oct 04 15:31:36 MSS sqlservr[10240]: [81B blob data]
+root@MSS:/#
+root@MSS:/# sqlcmd -S localhost -U SA -P 'root@123'
+sqlcmd: command not found
+root@MSS:/#
+root@MSS:/# sqlcmd -S localhost -U sa -P 'root@123'
+sqlcmd: command not found
+root@MSS:/#
+root@MSS:/# sudo systemctl stop mssql-server
+root@MSS:/# sudo mv /var/opt/mssql /var/opt/mssql.bak
+root@MSS:/# sudo mount --bind /MSSQL /var/opt/mssql
+mount: /var/opt/mssql: mount point does not exist.
+root@MSS:/#
+root@MSS:/# sudo mkdir -p /var/opt/mssql
+root@MSS:/# sudo mount --bind /MSSQL /var/opt/mssql
+root@MSS:/# df -h | grep mssql
+ls -ld /var/opt/mssql
+drwxrwxrwx 2 mssql mssql 4096 Oct  4 15:21 /var/opt/mssql
+root@MSS:/# echo "/MSSQL   /var/opt/mssql   none   bind   0   0" | sudo tee -a /etc/fstab
+/MSSQL   /var/opt/mssql   none   bind   0   0
+root@MSS:/#
+root@MSS:/# curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    89  100    89    0     0   1378      0 --:--:-- --:--:-- --:--:--  1390
+deb [arch=amd64,arm64,armhf] https://packages.microsoft.com/ubuntu/22.04/prod jammy main
+root@MSS:/#
+root@MSS:/# sudo apt-get update
+Get:1 https://packages.microsoft.com/ubuntu/22.04/prod jammy InRelease [3,632 B]
+Hit:2 https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022 jammy InRelease
+Get:3 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main arm64 Packages [87.4 kB]
+Get:4 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main all Packages [1,331 B]
+Get:5 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 Packages [258 kB]
+Get:6 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main armhf Packages [21.3 kB]
+Get:7 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:8 http://in.archive.ubuntu.com/ubuntu jammy InRelease
+Get:9 http://in.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:10 http://in.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Fetched 629 kB in 2s (333 kB/s)
+Reading package lists... Done
+root@MSS:/#
+root@MSS:/# sudo apt-get install -y mssql-tools unixodbc-dev
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libodbc2 libodbccr2 libodbcinst2 msodbcsql17 odbcinst unixodbc unixodbc-common
+Suggested packages:
+  odbc-postgresql tdsodbc
+The following NEW packages will be installed:
+  libodbc2 libodbccr2 libodbcinst2 msodbcsql17 mssql-tools odbcinst unixodbc unixodbc-common unixodbc-dev
+0 upgraded, 9 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1,458 kB of archives.
+After this operation, 2,668 kB of additional disk space will be used.
+Get:1 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 msodbcsql17 amd64 17.10.6.1-1 [746 kB]
+Get:2 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 mssql-tools amd64 17.10.1.1-1 [211 kB]
+Get:3 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libodbc2 amd64 2.3.9-5ubuntu0.1 [159 kB]
+Get:4 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libodbccr2 amd64 2.3.9-5ubuntu0.1 [16.7 kB]
+Get:5 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 unixodbc-common all 2.3.9-5ubuntu0.1 [9,256 B]
+Get:6 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libodbcinst2 amd64 2.3.9-5ubuntu0.1 [31.9 kB]
+Get:7 http://in.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 odbcinst amd64 2.3.9-5ubuntu0.1 [9,930 B]
+Get:8 http://in.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 unixodbc amd64 2.3.9-5ubuntu0.1 [26.7 kB]
+Get:9 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 unixodbc-dev amd64 2.3.9-5ubuntu0.1 [248 kB]
+Fetched 1,458 kB in 7s (204 kB/s)
+Preconfiguring packages ...
+Selecting previously unselected package libodbc2:amd64.
+(Reading database ... 183528 files and directories currently installed.)
+Preparing to unpack .../0-libodbc2_2.3.9-5ubuntu0.1_amd64.deb ...
+Unpacking libodbc2:amd64 (2.3.9-5ubuntu0.1) ...
+Selecting previously unselected package libodbccr2:amd64.
+Preparing to unpack .../1-libodbccr2_2.3.9-5ubuntu0.1_amd64.deb ...
+Unpacking libodbccr2:amd64 (2.3.9-5ubuntu0.1) ...
+Selecting previously unselected package unixodbc-common.
+Preparing to unpack .../2-unixodbc-common_2.3.9-5ubuntu0.1_all.deb ...
+Unpacking unixodbc-common (2.3.9-5ubuntu0.1) ...
+Selecting previously unselected package libodbcinst2:amd64.
+Preparing to unpack .../3-libodbcinst2_2.3.9-5ubuntu0.1_amd64.deb ...
+Unpacking libodbcinst2:amd64 (2.3.9-5ubuntu0.1) ...
+Selecting previously unselected package odbcinst.
+Preparing to unpack .../4-odbcinst_2.3.9-5ubuntu0.1_amd64.deb ...
+Unpacking odbcinst (2.3.9-5ubuntu0.1) ...
+Selecting previously unselected package unixodbc.
+Preparing to unpack .../5-unixodbc_2.3.9-5ubuntu0.1_amd64.deb ...
+Unpacking unixodbc (2.3.9-5ubuntu0.1) ...
+Selecting previously unselected package msodbcsql17.
+Preparing to unpack .../6-msodbcsql17_17.10.6.1-1_amd64.deb ...
+Unpacking msodbcsql17 (17.10.6.1-1) ...
+Selecting previously unselected package mssql-tools.
+Preparing to unpack .../7-mssql-tools_17.10.1.1-1_amd64.deb ...
+Unpacking mssql-tools (17.10.1.1-1) ...
+Selecting previously unselected package unixodbc-dev:amd64.
+Preparing to unpack .../8-unixodbc-dev_2.3.9-5ubuntu0.1_amd64.deb ...
+Unpacking unixodbc-dev:amd64 (2.3.9-5ubuntu0.1) ...
+Setting up unixodbc-common (2.3.9-5ubuntu0.1) ...
+Setting up libodbc2:amd64 (2.3.9-5ubuntu0.1) ...
+Setting up libodbccr2:amd64 (2.3.9-5ubuntu0.1) ...
+Setting up libodbcinst2:amd64 (2.3.9-5ubuntu0.1) ...
+Setting up odbcinst (2.3.9-5ubuntu0.1) ...
+Setting up unixodbc (2.3.9-5ubuntu0.1) ...
+Setting up msodbcsql17 (17.10.6.1-1) ...
+odbcinst: Driver installed. Usage count increased to 1.
+    Target directory is /etc
+Setting up unixodbc-dev:amd64 (2.3.9-5ubuntu0.1) ...
+Setting up mssql-tools (17.10.1.1-1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.11) ...
+root@MSS:/# echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+root@MSS:/# source ~/.bashrc
+root@MSS:/# df -h /MSSQL/
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda3        24G   13G   11G  54% /
+root@MSS:/#
+root@MSS:/# cd MSSQL/
+root@MSS:/MSSQL# ls -ltr
+total 0
+root@MSS:/MSSQL#
+root@MSS:/MSSQL# mount | grep mssql
+/dev/sda3 on /var/opt/mssql type ext4 (rw,relatime,errors=remount-ro)
+root@MSS:/MSSQL#
+root@MSS:/MSSQL# ls -ld /MSSQL
+ls -ld /var/opt/mssql
+drwxrwxrwx 2 mssql mssql 4096 Oct  4 15:21 /MSSQL
+drwxrwxrwx 2 mssql mssql 4096 Oct  4 15:21 /var/opt/mssql
+root@MSS:/MSSQL#
+root@MSS:/MSSQL# sudo cp -rp /var/opt/mssql.bak/* /MSSQL/
+root@MSS:/MSSQL#
+root@MSS:/MSSQL# ls
+data  log  mssql.conf  secrets
+root@MSS:/MSSQL#
+root@MSS:/MSSQL# sudo systemctl start mssql-server
+sudo systemctl status mssql-server
+● mssql-server.service - Microsoft SQL Server Database Engine
+     Loaded: loaded (/lib/systemd/system/mssql-server.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2025-10-04 15:38:35 IST; 31ms ago
+       Docs: https://docs.microsoft.com/en-us/sql/linux
+   Main PID: 13236 (sqlservr)
+      Tasks: 1
+     Memory: 3.8M
+        CPU: 25ms
+     CGroup: /system.slice/mssql-server.service
+             └─13236 /opt/mssql/bin/sqlservr
+
+Oct 04 15:38:35 MSS systemd[1]: Started Microsoft SQL Server Database Engine.
+root@MSS:/MSSQL#
+root@MSS:/MSSQL# ls -ltr
+total 16
+-rw-r--r-- 1 root  root   109 Oct  4 15:30 mssql.conf
+drwxrwxr-x 2 mssql mssql 4096 Oct  4 15:31 secrets
+drwxr-xr-x 2 mssql mssql 4096 Oct  4 15:31 data
+drwxr-xr-x 3 mssql mssql 4096 Oct  4 15:38 log
+root@MSS:/MSSQL#
+root@MSS:/MSSQL# sqlcmd -S localhost -U SA -P 'root@123'
+1> select @@VERSION;
+2> GO
+                                                                                                                                                                       
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Microsoft SQL Server 2022 (RTM-CU21) (KB5065865) - 16.0.4215.2 (X64)
+        Aug 11 2025 13:24:21
+        Copyright (C) 2022 Microsoft Corporation
+        Developer Edition (64-bit) on Linux (Ubuntu 22.04.5 LTS) <X64>                                                                                                 
+
+(1 rows affected)
+1>
+2> exit
+root@MSS:/MSSQL# sudo chown mssql:mssql /MSSQL/mssql.conf
+root@MSS:/MSSQL# ls -ltr
+total 16
+-rw-r--r-- 1 mssql mssql  109 Oct  4 15:30 mssql.conf
+drwxrwxr-x 2 mssql mssql 4096 Oct  4 15:31 secrets
+drwxr-xr-x 2 mssql mssql 4096 Oct  4 15:31 data
+drwxr-xr-x 3 mssql mssql 4096 Oct  4 15:38 log
+root@MSS:/MSSQL#
+root@MSS:/MSSQL# cat /etc/fstab
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sda3 during installation
+UUID=b77a76b2-6ce3-4cdc-980e-46a5e15ac1e1 /               ext4    errors=remount-ro 0       1
+# /boot/efi was on /dev/sda2 during installation
+UUID=46FD-F6F6  /boot/efi       vfat    umask=0077      0       1
+/swapfile                                 none            swap    sw              0       0
+/MSSQL   /var/opt/mssql   none   bind   0   0
+root@MSS:/MSSQL#
+root@MSS:/MSSQL# sudo reboot
+
+Remote side unexpectedly closed network connection
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Session stopped
+    - Press <Return> to exit tab
+    - Press R to restart session
+    - Press S to save terminal output to file
+login as: kedar
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │                 • MobaXterm Personal Edition v23.6 •                 │
+    │               (SSH client, X server and network tools)               │
+    │                                                                      │
+    │ ⮞ SSH session to kedar@192.168.0.162                                 │
+    │   • Direct SSH      :  ✓                                             │
+    │   • SSH compression :  ✓                                             │
+    │   • SSH-browser     :  ✓                                             │
+    │   • X11-forwarding  :  ✓  (remote display is forwarded through SSH)  │
+    │                                                                      │
+    │ ⮞ For more info, ctrl+click on help or visit our website.            │
+    └──────────────────────────────────────────────────────────────────────┘
+
+Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 6.8.0-85-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+New release '24.04.3 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Last login: Sat Oct  4 15:08:04 2025 from 192.168.0.134
+kedar@MSS:~$ sudo su
+[sudo] password for kedar:
+root@MSS:/home/kedar#
+root@MSS:/home/kedar# cd
+root@MSS:~#
+root@MSS:~# cd /MSSQL/
+root@MSS:/MSSQL# ls -ltr
+total 16
+-rw-r--r-- 1 mssql mssql  109 Oct  4 15:30 mssql.conf
+drwxrwxr-x 2 mssql mssql 4096 Oct  4 15:31 secrets
+drwxr-xr-x 2 mssql mssql 4096 Oct  4 15:31 data
+drwxr-xr-x 3 mssql mssql 4096 Oct  4 15:42 log
+root@MSS:/MSSQL#
+root@MSS:/MSSQL# systemctl status mssql-server
+● mssql-server.service - Microsoft SQL Server Database Engine
+     Loaded: loaded (/lib/systemd/system/mssql-server.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2025-10-04 15:42:07 IST; 43s ago
+       Docs: https://docs.microsoft.com/en-us/sql/linux
+   Main PID: 654 (sqlservr)
+      Tasks: 159
+     Memory: 1.8G
+        CPU: 13.136s
+     CGroup: /system.slice/mssql-server.service
+             ├─ 654 /opt/mssql/bin/sqlservr
+             └─1406 /opt/mssql/bin/sqlservr
+
+Oct 04 15:42:24 MSS sqlservr[1406]: [193B blob data]
+Oct 04 15:42:24 MSS sqlservr[1406]: [217B blob data]
+Oct 04 15:42:24 MSS sqlservr[1406]: [64B blob data]
+Oct 04 15:42:24 MSS sqlservr[1406]: [193B blob data]
+Oct 04 15:42:24 MSS sqlservr[1406]: [66B blob data]
+Oct 04 15:42:24 MSS sqlservr[1406]: [75B blob data]
+Oct 04 15:42:24 MSS sqlservr[1406]: [96B blob data]
+Oct 04 15:42:24 MSS sqlservr[1406]: [100B blob data]
+Oct 04 15:42:24 MSS sqlservr[1406]: [124B blob data]
+Oct 04 15:42:24 MSS sqlservr[1406]: [71B blob data]
+root@MSS:/MSSQL#
+root@MSS:/MSSQL#
+Network error: Software caused connection abort
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Session stopped
+    - Press <Return> to exit tab
+    - Press R to restart session
+    - Press S to save terminal output to file
+login as: kedar
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │                 • MobaXterm Personal Edition v23.6 •                 │
+    │               (SSH client, X server and network tools)               │
+    │                                                                      │
+    │ ⮞ SSH session to kedar@192.168.0.162                                 │
+    │   • Direct SSH      :  ✓                                             │
+    │   • SSH compression :  ✓                                             │
+    │   • SSH-browser     :  ✓                                             │
+    │   • X11-forwarding  :  ✓  (remote display is forwarded through SSH)  │
+    │                                                                      │
+    │ ⮞ For more info, ctrl+click on help or visit our website.            │
+    └──────────────────────────────────────────────────────────────────────┘
+
+Last login: Sat Oct  4 15:42:21 2025 from 192.168.0.134
+kedar@MSS:~$ sudo su
+[sudo] password for kedar:
+root@MSS:/home/kedar#
+root@MSS:/home/kedar# cd
+root@MSS:~#
+root@MSS:~# systemctl status mssql-server
+● mssql-server.service - Microsoft SQL Server Database Engine
+     Loaded: loaded (/lib/systemd/system/mssql-server.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2025-10-04 15:44:32 IST; 1min 35s ago
+       Docs: https://docs.microsoft.com/en-us/sql/linux
+   Main PID: 664 (sqlservr)
+      Tasks: 161
+     Memory: 1.8G
+        CPU: 20.376s
+     CGroup: /system.slice/mssql-server.service
+             ├─ 664 /opt/mssql/bin/sqlservr
+             └─1490 /opt/mssql/bin/sqlservr
+
+Oct 04 15:44:54 MSS sqlservr[1490]: [64B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [158B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [155B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [193B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [66B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [75B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [96B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [100B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [124B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [71B blob data]
+root@MSS:~#
+root@MSS:~# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           824M  1.5M  822M   1% /run
+/dev/sda3        24G   13G   11G  55% /
+tmpfs           4.1G     0  4.1G   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+/dev/sda2       512M  6.1M  506M   2% /boot/efi
+tmpfs           824M   88K  824M   1% /run/user/1000
+root@MSS:~#
+root@MSS:~# lsblk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0    7:0    0 271.2M  1 loop /snap/firefox/4848
+loop1    7:1    0 505.1M  1 loop /snap/gnome-42-2204/176
+loop2    7:2    0  12.9M  1 loop /snap/snap-store/1113
+loop3    7:3    0  91.7M  1 loop /snap/gtk-common-themes/1535
+loop4    7:4    0  74.3M  1 loop /snap/core22/1612
+loop5    7:5    0  38.8M  1 loop /snap/snapd/21759
+loop6    7:6    0   500K  1 loop /snap/snapd-desktop-integration/178
+loop7    7:7    0     4K  1 loop /snap/bare/5
+sda      8:0    0    25G  0 disk
+├─sda1   8:1    0     1M  0 part
+├─sda2   8:2    0   513M  0 part /boot/efi
+└─sda3   8:3    0  24.5G  0 part /var/opt/mssql
+                                 /
+sdb      8:16   0    20G  0 disk
+sr0     11:0    1  1024M  0 rom
+root@MSS:~#
+root@MSS:~# sudo fdisk /dev/sdb
+
+Welcome to fdisk (util-linux 2.37.2).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Device does not contain a recognized partition table.
+Created a new DOS disklabel with disk identifier 0x9f45a1ca.
+
+Command (m for help): n
+Partition type
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended (container for logical partitions)
+Select (default p):
+
+Using default response p.
+Partition number (1-4, default 1):
+First sector (2048-41943039, default 2048):
+Last sector, +/-sectors or +/-size{K,M,G,T,P} (2048-41943039, default 41943039):
+
+Created a new partition 1 of type 'Linux' and of size 20 GiB.
+
+Command (m for help): w
+The partition table has been altered.
+Calling ioctl() to re-read partition table.
+Syncing disks.
+
+root@MSS:~#
+root@MSS:~# sudo mkfs.ext4 /dev/sdb1
+mke2fs 1.46.5 (30-Dec-2021)
+Creating filesystem with 5242624 4k blocks and 1310720 inodes
+Filesystem UUID: 5aa14f84-1c32-4348-b9f7-cf786dc252b8
+Superblock backups stored on blocks:
+        32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208,
+        4096000
+
+Allocating group tables: done
+Writing inode tables: done
+Creating journal (32768 blocks): done
+Writing superblocks and filesystem accounting information: done
+
+root@MSS:~#
+root@MSS:~# sudo mkdir -p /live_MSSQL
+root@MSS:~# sudo mount /dev/sdb1 /live_MSSQL
+root@MSS:~# sudo blkid /dev/sdb1
+/dev/sdb1: UUID="5aa14f84-1c32-4348-b9f7-cf786dc252b8" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="9f45a1ca-01"
+root@MSS:~#
+root@MSS:~# sudo nano /etc/fstab
+root@MSS:~#
+root@MSS:~# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           824M  1.5M  822M   1% /run
+/dev/sda3        24G   13G   11G  55% /
+tmpfs           4.1G     0  4.1G   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+/dev/sda2       512M  6.1M  506M   2% /boot/efi
+tmpfs           824M   92K  824M   1% /run/user/1000
+/dev/sdb1        20G   24K   19G   1% /live_MSSQL
+root@MSS:~#
+root@MSS:~# systemctl status mssql-server
+● mssql-server.service - Microsoft SQL Server Database Engine
+     Loaded: loaded (/lib/systemd/system/mssql-server.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2025-10-04 15:44:32 IST; 4min 53s ago
+       Docs: https://docs.microsoft.com/en-us/sql/linux
+   Main PID: 664 (sqlservr)
+      Tasks: 152
+     Memory: 1.8G
+        CPU: 25.419s
+     CGroup: /system.slice/mssql-server.service
+             ├─ 664 /opt/mssql/bin/sqlservr
+             └─1490 /opt/mssql/bin/sqlservr
+
+Oct 04 15:44:54 MSS sqlservr[1490]: [64B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [158B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [155B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [193B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [66B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [75B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [96B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [100B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [124B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [71B blob data]
+root@MSS:~#
+root@MSS:~# cd /MSSQL/
+root@MSS:/MSSQL# ls -ltr
+total 16
+-rw-r--r-- 1 mssql mssql  109 Oct  4 15:30 mssql.conf
+drwxrwxr-x 2 mssql mssql 4096 Oct  4 15:31 secrets
+drwxr-xr-x 2 mssql mssql 4096 Oct  4 15:31 data
+drwxr-xr-x 3 mssql mssql 4096 Oct  4 15:44 log
+root@MSS:/MSSQL# cd data
+root@MSS:/MSSQL/data# ls
+Entropy.bin  mastlog.ldf   model.mdf           model_msdblog.ldf           model_replicatedmaster.mdf  msdblog.ldf  templog.ldf
+master.mdf   modellog.ldf  model_msdbdata.mdf  model_replicatedmaster.ldf  msdbdata.mdf                tempdb.mdf
+root@MSS:/MSSQL/data# sudo apt update
+Hit:1 https://packages.microsoft.com/ubuntu/22.04/prod jammy InRelease
+Hit:2 https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022 jammy InRelease
+Hit:3 http://in.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:4 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:5 http://in.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:6 http://in.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+root@MSS:/MSSQL/data#
+root@MSS:/MSSQL/data#
+root@MSS:/MSSQL/data# cd ..
+root@MSS:/MSSQL# ls -ltr
+total 16
+-rw-r--r-- 1 mssql mssql  109 Oct  4 15:30 mssql.conf
+drwxrwxr-x 2 mssql mssql 4096 Oct  4 15:31 secrets
+drwxr-xr-x 2 mssql mssql 4096 Oct  4 15:31 data
+drwxr-xr-x 3 mssql mssql 4096 Oct  4 15:44 log
+root@MSS:/MSSQL#
+root@MSS:/MSSQL# systemctl status mssql
+Unit mssql.service could not be found.
+root@MSS:/MSSQL# systemctl status mssql-server
+● mssql-server.service - Microsoft SQL Server Database Engine
+     Loaded: loaded (/lib/systemd/system/mssql-server.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2025-10-04 15:44:32 IST; 16min ago
+       Docs: https://docs.microsoft.com/en-us/sql/linux
+   Main PID: 664 (sqlservr)
+      Tasks: 168
+     Memory: 2.0G
+        CPU: 49.496s
+     CGroup: /system.slice/mssql-server.service
+             ├─ 664 /opt/mssql/bin/sqlservr
+             └─1490 /opt/mssql/bin/sqlservr
+
+Oct 04 15:44:54 MSS sqlservr[1490]: [193B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [66B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [75B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [96B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [100B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [124B blob data]
+Oct 04 15:44:54 MSS sqlservr[1490]: [71B blob data]
+Oct 04 15:50:56 MSS sqlservr[1490]: [156B blob data]
+Oct 04 15:50:56 MSS sqlservr[1490]: [195B blob data]
+Oct 04 15:54:29 MSS sqlservr[1490]: [71B blob data]
+root@MSS:/MSSQL#
+root@MSS:/MSSQL# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           824M  1.5M  822M   1% /run
+/dev/sda3        24G   13G   11G  55% /
+tmpfs           4.1G     0  4.1G   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+/dev/sda2       512M  6.1M  506M   2% /boot/efi
+tmpfs           824M   92K  824M   1% /run/user/1000
+/dev/sdb1        20G   24K   19G   1% /live_MSSQL
+root@MSS:/MSSQL# ip r s
+default via 192.168.0.1 dev enp0s3 proto dhcp metric 100
+169.254.0.0/16 dev enp0s3 scope link metric 1000
+192.168.0.0/24 dev enp0s3 proto kernel scope link src 192.168.0.162 metric 100
+root@MSS:/MSSQL#
+root@MSS:/MSSQL# sudo mkdir -p /live_MSSQL/data
+sudo mkdir -p /live_MSSQL/log
+sudo chown -R mssql:mssql /live_MSSQL
+sudo chmod -R 770 /live_MSSQL
+root@MSS:/MSSQL#
+root@MSS:/MSSQL# sqlcmd -S localhost -U SA -P 'root@123'
+1>
+2> CREATE DATABASE Gen_Live
+3> ON
+4> ( NAME = SecondDB_data, FILENAME = '/live_MSSQL/data/Gen_Live.mdf' ),
+5> ( NAME = SecondDB_log,  FILENAME = '/live_MSSQL/log/Gen_Live.ldf' )
+6> GO
+1>
+2> SELECT name, physical_name AS FileLocation FROM sys.master_files WHERE database_id = DB_ID('Gen_Live');
+3>
+4> GO
+name                                                                                                                             FileLocation                                                                                                                                                                                                 
+-------------------------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SecondDB_data                                                                                                                    /live_MSSQL/data/Gen_Live.mdf                                                                                                                                                                                
+Gen_Live_log                                                                                                                     /live_MSSQL/data/Gen_Live_log.ldf                                                                                                                                                                            
+SecondDB_log                                                                                                                     /live_MSSQL/log/Gen_Live.ldf                                                                                                                                                                                 
+
+(3 rows affected)
+1>
+2> exit
+root@MSS:/MSSQL# cd /live_MSSQL/
+root@MSS:/live_MSSQL# ls
+data  log  lost+found
+root@MSS:/live_MSSQL# cd data/
+root@MSS:/live_MSSQL/data# ls -l
+total 16384
+-rw-rw---- 1 mssql mssql 8388608 Oct  4 16:11 Gen_Live_log.ldf
+-rw-rw---- 1 mssql mssql 8388608 Oct  4 16:09 Gen_Live.mdf
+root@MSS:/live_MSSQL/data#
+root@MSS:/live_MSSQL/data# cd
+root@MSS:~#
+root@MSS:~#
+root@MSS:~# sqlcmd -S localhost -U SA -P 'root@123'
+1>
+2> USE master;
+3> GO
+Changed database context to 'master'.
+1>
+2> -- Create a login for the Gen_Live database
+3> CREATE LOGIN gen_user WITH PASSWORD = 'GenPass@123';
+4> GO
+1>
+2> USE Gen_Live;
+3> GO
+Changed database context to 'Gen_Live'.
+1> -- Create database user mapped to the login
+2> CREATE USER gen_user FOR LOGIN gen_user;
+3> GO
+1>
+2> -- Give appropriate permissions (example: db_owner)
+3> ALTER ROLE db_owner ADD MEMBER gen_user;
+4> GO
+1>
+2> -- Revoke default permission to see all databases
+3> USE master;
+4> GO
+Changed database context to 'master'.
+1> REVOKE VIEW ANY DATABASE FROM PUBLIC;
+2> GO
+1>
+2> exit
+root@MSS:~# sqlcmd -S localhost -U gen_user -P 'GenPass@123'
+1> SELECT name FROM sys.databases;
+2> GO
+name
+--------------------------------------------------------------------------------------------------------------------------------
+master
+tempdb
+
+(2 rows affected)
+1> USE Gen_Live;
+2> GO
+Changed database context to 'Gen_Live'.
+1>
+2> GRANT VIEW DEFINITION TO gen_user;
+3> GO
+Cannot grant, deny, or revoke permissions to sa, dbo, entity owner, information_schema, sys, or yourself.
+1>
+2> USE master;
+3> GO
+Changed database context to 'master'.
+1> GRANT VIEW DEFINITION TO gen_user;
+2> GO
+Msg 15151, Level 16, State 1, Server MSS, Line 1
+Cannot find the user 'gen_user', because it does not exist or you do not have permission.
+1>
+2> exit
+root@MSS:~#
 root@MSS:~# history
     1  cd
     2  df -h
@@ -107,3 +1144,75 @@ root@MSS:~# history
   106  sqlcmd -S localhost -U gen_user -P 'GenPass@123'
   107  history
 root@MSS:~#
+root@MSS:~# cd /var/opt/
+root@MSS:/var/opt# ls -ltr
+total 8
+drwxrwx--- 6 mssql mssql 4096 Oct  4 15:31 mssql.bak
+drwxrwxrwx 6 mssql mssql 4096 Oct  4 15:38 mssql
+root@MSS:/var/opt#
+root@MSS:/var/opt# cd mssql
+root@MSS:/var/opt/mssql# ls
+data  log  mssql.conf  secrets
+root@MSS:/var/opt/mssql# sqlcmd -S localhost -U SA -P 'root@123'
+1> SELECT name FROM sys.databases;
+2> GO
+name
+--------------------------------------------------------------------------------------------------------------------------------
+master
+tempdb
+model
+msdb
+Gen_Live
+
+(5 rows affected)
+1> SELECT name, type_desc, create_date FROM sys.server_principals WHERE name = 'gen_user';
+2> GO
+name                                                                                                                             type_desc                                                    create_date
+-------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------ -----------------------
+gen_user                                                                                                                         SQL_LOGIN                                                    2025-10-04 16:19:16.940
+
+(1 rows affected)
+1> , dp.type_desc, dp.create_date, d.name AS DatabaseName FROM sys.database_principals dp JOIN sys.databases d ON HAS_DBACCESS(d.name) = 1 WHERE dp.name = 'gen_user';
+2> GO
+DatabaseUser                                                                                                                     type_desc                                                    create_date             DatabaseName                                                                                                            
+-------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------ ----------------------- --------------------------------------------------------------------------------------------------------------------------------
+
+(0 rows affected)
+1> USE Gen_Live;
+2>
+3> GO
+Changed database context to 'Gen_Live'.
+1>
+2> SELECT name, type_desc, create_date FROM sys.database_principals WHERE name = 'gen_user';
+3> GO
+name                                                                                                                             type_desc                                                    create_date
+-------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------ -----------------------
+gen_user                                                                                                                         SQL_USER                                                     2025-10-04 16:19:45.607
+
+(1 rows affected)
+1> -- Check role membership
+2> embers drm ON dp.principal_id = drm.member_principal_id LEFT JOIN sys.database_principals dr ON drm.role_principal_id = dr.principal_id WHERE dp.name = 'gen_user';
+3> GO
+UserName                                                                                                                         RoleName                              
+-------------------------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------
+gen_user                                                                                                                         db_owner                              
+
+(1 rows affected)
+1> IN sys.database_principals dp ON perm.grantee_principal_id = dp.principal_id LEFT JOIN sys.objects obj ON perm.major_id = obj.object_id WHERE dp.name = 'gen_user';
+2> GO
+permission_name                                                                                                                  state_desc                                                   ObjectName                                                                                                                       ObjectType     
+-------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------ -------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------
+CONNECT                                                                                                                          GRANT                                                        NULL                                                                                                                             NULL           
+
+(1 rows affected)
+1> USE Gen_Live;
+2> GO
+Changed database context to 'Gen_Live'.
+1> ALTER ROLE db_owner DROP MEMBER gen_user;
+2> GO
+1> ALTER ROLE db_ddladmin ADD MEMBER gen_user;   -- Can create/alter/drop tables, views, procs, functions, schemas
+2> ALTER ROLE db_datareader ADD MEMBER gen_user; -- Can select from all tables
+3> ALTER ROLE db_datawriter ADD MEMBER gen_user; -- Can insert/update/delete on all tables
+4> GO
+1>
+2>
