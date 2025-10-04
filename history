@@ -1,0 +1,109 @@
+root@MSS:~# history
+    1  cd
+    2  df -h
+    3  curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+    4  sudo apt install curl
+    5  # Public repo key
+    6  curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+    7  # register SQL server repo
+    8  df -h
+    9  cd /
+   10  ls
+   11  ls -ltr
+   12  mkdir -p MSSQL
+   13  chmod -X MSSQL
+   14  ls -ltr
+   15  chmod -R 777\ MSSQL
+   16  chmod -R 777 MSSQL
+   17  ls -ltr
+   18  df -h
+   19  cd MSSQL/
+   20  pwd
+   21  hostnamectl
+   22  curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   23  curl https://packages.microsoft.com/config/ubuntu/22.04/mssql-server-2022.list | sudo tee /etc/apt/sources.list.d/mssql-server.list
+   24  sudo apt-get update
+   25  sudo apt -a list mssql-server
+   26  sudo apt-get install -y mssql-server
+   27  sudo /opt/mssql/bin/mssql-conf setup
+   28  pwd
+   29  cd ..
+   30  sudo chown mssql:mssql /MSSQL
+   31  sudo systemctl status mssql-server
+   32  sqlcmd -S localhost -U SA -P 'root@123'
+   33  sqlcmd -S localhost -U sa -P 'root@123'
+   34  sudo systemctl stop mssql-server
+   35  sudo mv /var/opt/mssql /var/opt/mssql.bak
+   36  sudo mount --bind /MSSQL /var/opt/mssql
+   37  sudo mkdir -p /var/opt/mssql
+   38  sudo mount --bind /MSSQL /var/opt/mssql
+   39  df -h | grep mssql
+   40  ls -ld /var/opt/mssql
+   41  echo "/MSSQL   /var/opt/mssql   none   bind   0   0" | sudo tee -a /etc/fstab
+   42  curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+   43  sudo apt-get update
+   44  sudo apt-get install -y mssql-tools unixodbc-dev
+   45  echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+   46  source ~/.bashrc
+   47  df -h /MSSQL/
+   48  cd MSSQL/
+   49  ls -ltr
+   50  mount | grep mssql
+   51  ls -ld /MSSQL
+   52  ls -ld /var/opt/mssql
+   53  sudo cp -rp /var/opt/mssql.bak/* /MSSQL/
+   54  ls
+   55  sudo systemctl start mssql-server
+   56  sudo systemctl status mssql-server
+   57  ls -ltr
+   58  sqlcmd -S localhost -U SA -P 'root@123'
+   59  sudo chown mssql:mssql /MSSQL/mssql.conf
+   60  ls -ltr
+   61  cat /etc/fstab
+   62  sudo reboot
+   63  cd
+   64  df -h
+   65  lsblk
+   66  sudo apt install openssh server
+   67  sudo apt install openssh-server
+   68  sudo systemctl start sshd
+   69  sudo systemctl enable sshd
+   70  sudo systemctl status sshd
+   71  ip r s
+   72  cd
+   73  systemctl status mssql-server
+   74  df -h
+   75  lsblk
+   76  sudo fdisk /dev/sdb
+   77  sudo mkfs.ext4 /dev/sdb1
+   78  sudo mkdir -p /live_MSSQL
+   79  sudo mount /dev/sdb1 /live_MSSQL
+   80  sudo blkid /dev/sdb1
+   81  sudo nano /etc/fstab
+   82  df -h
+   83  systemctl status mssql-server
+   84  cd /MSSQL/
+   85  ls -ltr
+   86  cd data
+   87  ls
+   88  sudo apt update
+   89  cd ..
+   90  ls -ltr
+   91  systemctl status mssql
+   92  systemctl status mssql-server
+   93  df -h
+   94  ip r s
+   95  sudo mkdir -p /live_MSSQL/data
+   96  sudo mkdir -p /live_MSSQL/log
+   97  sudo chown -R mssql:mssql /live_MSSQL
+   98  sudo chmod -R 770 /live_MSSQL
+   99  sqlcmd -S localhost -U SA -P 'root@123'
+  100  cd /live_MSSQL/
+  101  ls
+  102  cd data/
+  103  ls -l
+  104  cd
+  105  sqlcmd -S localhost -U SA -P 'root@123'
+  106  sqlcmd -S localhost -U gen_user -P 'GenPass@123'
+  107  history
+root@MSS:~#
