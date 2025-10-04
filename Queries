@@ -1,0 +1,28 @@
+CREATE DATABASE Gen_Live
+ON
+( NAME = SecondDB_data, FILENAME = '/live_MSSQL/data/Gen_Live.mdf' ),
+( NAME = SecondDB_log,  FILENAME = '/live_MSSQL/log/Gen_Live.ldf' )
+GO
+
+SELECT name, physical_name AS FileLocation FROM sys.master_files WHERE database_id = DB_ID('Gen_Live');
+GO
+
+SELECT name, type_desc, create_date FROM sys.server_principals WHERE name = 'gen_user';
+
+SELECT dp.name AS DatabaseUser, dp.type_desc, dp.create_date, d.name AS DatabaseName FROM sys.database_principals dp JOIN sys.databases d ON HAS_DBACCESS(d.name) = 1 WHERE dp.name = 'gen_user';
+
+SELECT name, type_desc, create_date FROM sys.database_principals WHERE name = 'gen_user';
+
+SELECT dp.name AS UserName, dr.name AS RoleName FROM sys.database_principals dp LEFT JOIN sys.database_role_members drm ON dp.principal_id = drm.member_principal_id LEFT JOIN sys.database_principals dr ON drm.role_principal_id = dr.principal_id WHERE dp.name = 'gen_user';
+
+-- Check explicit permissions
+SELECT perm.permission_name, perm.state_desc, obj.name AS ObjectName, obj.type_desc AS ObjectType FROM sys.database_permissions perm JOIN sys.database_principals dp ON perm.grantee_principal_id = dp.principal_id LEFT JOIN sys.objects obj ON perm.major_id = obj.object_id WHERE dp.name = 'gen_user';
+
+SELECT dp.name AS UserName, dr.name AS RoleName
+FROM sys.database_principals dp
+LEFT JOIN sys.database_role_members drm 
+    ON dp.principal_id = drm.member_principal_id
+LEFT JOIN sys.database_principals dr 
+    ON drm.role_principal_id = dr.principal_id
+WHERE dp.name = 'gen_user';
+GO
